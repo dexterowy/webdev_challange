@@ -1,0 +1,115 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pageWrapper {
+  background: url("../images/bgimage.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forms {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.formBox {
+  width: 420px;
+  border-radius: 3px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.formBox__header {
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.formBox__form {
+  display: block;
+  width: 380px;
+  background: #F4F4F4;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.formBox__select, .formBox__inputText {
+  display: block;
+  font-size: 16px;
+  color: #AFAFAF;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em 80px;
+  width: 100%;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 1px 1px 0 0px white;
+          box-shadow: 1px 1px 0 0px white;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.formBox__select--location, .formBox__inputText--location {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"), url("../images/line.png"), url("../images/geotag.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"), url("../images/line.png"), url("../images/geotag.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-position: right .7em top 50%, 60px 5px, left 23px top 8px, 0 0;
+  background-size: .65em auto, auto, auto, 100%;
+}
+
+.formBox__select--user, .formBox__inputText--user {
+  background-image: url("../images/line.png"), url("../images/user.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background-image: url("../images/line.png"), url("../images/user.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: 60px 5px, left 19px top 9px, 0 0;
+  background-size: auto, auto, 100%;
+}
+
+.formBox__select--email, .formBox__inputText--email {
+  background-image: url("../images/line.png"), url("../images/mail.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background-image: url("../images/line.png"), url("../images/mail.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: 60px 5px, left 18px top 10px, 0 0;
+  background-size: auto, auto, 100%;
+}
+
+.formBox__select--password, .formBox__inputText--password {
+  background-image: url("../images/line.png"), url("../images/lock.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background-image: url("../images/line.png"), url("../images/lock.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: 60px 5px, left 18px top 6px, 0 0;
+  background-size: auto, auto, 100%;
+}
+/*# sourceMappingURL=style.css.map */

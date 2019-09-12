@@ -1,7 +1,7 @@
 ## Challenge 1
 This is a simple page with forms. Made only with html and css. I used it to learn sass.
 
-## technological stack
+## Technological stack
 - HTML
 - CSS
 - SASS

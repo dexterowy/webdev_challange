@@ -13,21 +13,106 @@
             <h1><img class="header__logo" src="images/main_logo.png" /></h1>
         </header>
         <div class="forms">
-            <div class="formBox">
-                <h2 class="formBox__header">
-                    Register Form
-                </h2>
-                <form class="formBox__form">
-                    <input type="text" placeholder="Username" class="formBox__inputText formBox__inputText--user">
-                    <input type="password" placeholder="Password" class="formBox__inputText formBox__inputText--password">
-                    <input type="password" placeholder="Confirm Password" class="formBox__inputText formBox__inputText--password">
-                    <input type="text" placeholder="Email" class="formBox__inputText formBox__inputText--email">
-                    <select class="formBox__select formBox__select--location">
-                        <option selected>Your Location</option>
-                    </select>
-                </form>
+            <div class="forms__col">
+                <div class="formBox">
+                    <h2 class="formBox__header">
+                        Register Form
+                    </h2>
+                    <div class="formBox__formWrapper">
+                        <form class="formBox__form">
+                            <input type="text" placeholder="Username" class="formBox__inputText formBox__inputText--user">
+                            <input type="password" placeholder="Password" class="formBox__inputText formBox__inputText--password">
+                            <input type="password" placeholder="Confirm Password" class="formBox__inputText formBox__inputText--password">
+                            <input type="text" placeholder="Email" class="formBox__inputText formBox__inputText--email">
+                            <select class="formBox__select formBox__select--location">
+                                <option selected>Your Location</option>
+                                <option value="poland">Poland</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label class="formBox__label" >
+                                <input type="checkbox" class="formBox__checkbox">
+                                <span class="formBox__customCheckbox"></span>
+                                I have read and accept the terms of use.
+                            </label>
+                            <input class="formBox__submit" type="submit" value="Sign up">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formBox">
+                    <h2 class="formBox__header">
+                        Send Email
+                    </h2>
+                    <div class="formBox__formWrapper">
+                        <form class="formBox__form">
+                            <input type="text" placeholder="Your name" class="formBox__inputText formBox__inputText--user">
+                            <input type="text" placeholder="Your Email" class="formBox__inputText formBox__inputText--email">
+                            <textarea class="formBox__textarea" name="contetnt" id="content" cols="30" rows="10" placeholder="Type your message ..."></textarea>
+                            <label class="formBox__label">
+                                <input type="checkbox" class="formBox__checkbox">
+                                <span class="formBox__customCheckbox"></span>
+                                Send a copy to my Email
+                            </label>
+                            <input class="formBox__submit" type="submit" value="Send Email">
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="forms__col">
+                <div class="formBox">
+                    <h2 class="formBox__header">
+                        Sign In Form
+                    </h2>
+                    <div class="formBox__formWrapper">
+                        <form class="formBox__form">
+                            <input type="text" placeholder="Username" class="formBox__inputText formBox__inputText--user">
+                            <input type="password" placeholder="Password" class="formBox__inputText formBox__inputText--password">
+                            <div class="formBox__finish">
+                                <label class="formBox__label">
+                                    <input type="checkbox" class="formBox__checkbox">
+                                    <span class="formBox__customCheckbox"></span>
+                                    Remember me
+                                </label>
+                                <input class="formBox__submit " type="submit" value="Sign in">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formBox">
+                    <h2 class="formBox__header">
+                        Recover Form
+                    </h2>
+                    <div class="formBox__formWrapper">
+                        <form class="formBox__form">
+                            <input type="text" placeholder="Enter your Email" class="formBox__inputText formBox__inputText--email">
+                            <input type="text" placeholder="Enter your Phone number" class="formBox__inputText formBox__inputText--phone">
+                            <div class="formBox__finish">
+                                <input class="formBox__submit" type="submit" value="Send">
+                                <input class="formBox__submit" disabled type="submit" value="Done">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formBox">
+                    <h2 class="formBox__header">
+                        Subscribrbe Form
+                    </h2>
+                    <div class="formBox__formWrapper">
+                        <form class="formBox__form">
+                            <input type="text" placeholder="Enter your Email" class="formBox__inputText formBox__inputText--email">
+                            <div class="formBox__finish">
+                                <input class="formBox__submit " type="submit" value="Subscribe">
+                                <input class="formBox__decline " type="submit" value="No, Thanks">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img class="forms__logo" src="/images/logo_bottom.png" alt="">
+            </div>
+         </div>
     </div>
 
     <script src="js/main.js"></script>

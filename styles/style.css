@@ -1,8 +1,11 @@
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .pageWrapper {
@@ -11,6 +14,7 @@ body {
   width: 100%;
   min-height: 300px;
   padding: 20px;
+  z-index: 1;
 }
 
 .header {
@@ -28,11 +32,26 @@ body {
 
 .forms {
   font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.forms__col {
+  margin: 0 30px;
+}
+
+.forms__logo {
+  margin: 60px 30px;
 }
 
 .formBox {
   width: 420px;
-  border-radius: 3px;
+  border-radius: 4px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,12 +63,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
+  z-index: 5;
 }
 
 .formBox__header {
   color: #FFFFFF;
   font-weight: normal;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+.formBox__formWrapper {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .formBox__form {
@@ -57,7 +82,8 @@ body {
   width: 380px;
   background: #F4F4F4;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 4px;
+  margin: 20px;
 }
 
 .formBox__select, .formBox__inputText {
@@ -70,7 +96,7 @@ body {
   height: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #aaa;
+  border: 1px solid #C6C6C6;
   -webkit-box-shadow: 1px 1px 0 0px white;
           box-shadow: 1px 1px 0 0px white;
   border-radius: 3px;
@@ -79,6 +105,22 @@ body {
           appearance: none;
   background-color: #fff;
   margin: 20px auto;
+}
+
+.formBox__select::-webkit-input-placeholder, .formBox__inputText::-webkit-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__select:-ms-input-placeholder, .formBox__inputText:-ms-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__select::-ms-input-placeholder, .formBox__inputText::-ms-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__select::placeholder, .formBox__inputText::placeholder {
+  color: #AFAFAF;
 }
 
 .formBox__select--location, .formBox__inputText--location {
@@ -109,7 +151,143 @@ body {
   background-image: url("../images/line.png"), url("../images/lock.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
   background-image: url("../images/line.png"), url("../images/lock.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
   background-repeat: no-repeat, no-repeat, repeat;
-  background-position: 60px 5px, left 18px top 6px, 0 0;
+  background-position: 60px 5px, left 20px top 6px, 0 0;
   background-size: auto, auto, 100%;
+}
+
+.formBox__select--phone, .formBox__inputText--phone {
+  background-image: url("../images/line.png"), url("../images/phone.png"), -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background-image: url("../images/line.png"), url("../images/phone.png"), linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: 60px 5px, left 23px top 6px, 0 0;
+  background-size: auto, auto, 100%;
+}
+
+.formBox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 17px;
+  color: #AFAFAF;
+  margin: -6px 0 12px;
+}
+
+.formBox__checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.formBox__checkbox:checked ~ .formBox__customCheckbox::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formBox__customCheckbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background: linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  width: 23px;
+  height: 23px;
+  border: 1px solid #C6C6C6;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 12px 0 0;
+}
+
+.formBox__customCheckbox::after {
+  content: '';
+  display: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 0px #FFF;
+          box-shadow: 1px 1px 0px #FFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c0df84), to(#738f2f));
+  background: linear-gradient(to bottom, #c0df84 0%, #738f2f 100%);
+}
+
+.formBox__textarea {
+  width: 100%;
+  resize: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9F9F9F));
+  background: linear-gradient(to bottom, #ffffff 0%, #9F9F9F 100%);
+  margin: 0px 0 20px;
+  border-radius: 4px;
+  border: 1px solid #C6C6C6;
+  padding: 10px;
+  color: #AFAFAF;
+  font-size: 16px;
+}
+
+.formBox__textarea::-webkit-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__textarea:-ms-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__textarea::-ms-input-placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__textarea::placeholder {
+  color: #AFAFAF;
+}
+
+.formBox__submit, .formBox__decline {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  border: 1px solid #3A9A00;
+  font-size: 24px;
+  text-shadow: 1px 1px 0 #51850E;
+  color: #FFFFFF;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c0df84), to(#738f2f));
+  background: linear-gradient(to bottom, #c0df84 0%, #738f2f 100%);
+  padding: 10px;
+  text-align: center;
+}
+
+.formBox__submit:disabled, .formBox__decline:disabled {
+  opacity: .7;
+}
+
+.formBox__decline {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e59ba2), to(#9c464e));
+  background: linear-gradient(to bottom, #e59ba2 0%, #9c464e 100%);
+  text-shadow: 1px 1px 0 #51850E;
+  border: 1px solid #A2202A;
+}
+
+.formBox__finish {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.formBox__finish .formBox__label {
+  height: 100%;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

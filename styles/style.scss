@@ -35,15 +35,24 @@ body {
 .forms {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    flex-direction: column;
     width: auto;
     justify-content: center;
+    align-items: center;
+
+    @media (min-width: 950px) {
+        flex-direction: row;
+        align-items: unset;
+    }
 
     &__col {
         margin: 0 30px;
+        height: 100%;
     }
 
     &__logo {
-        margin: 60px 30px;
+        margin: 55px 30px;
+        justify-self: flex-end;
     }
 }
 
